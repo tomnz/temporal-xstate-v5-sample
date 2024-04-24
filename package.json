@@ -1,4 +1,18 @@
 {
   "name": "temporal-xstate-v5",
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.1.1",
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@temporalio/client": "^1.9.3",
+    "@temporalio/worker": "^1.9.3",
+    "@temporalio/workflow": "^1.9.3",
+    "xstate": "^5.11.0"
+  }
 }

@@ -4,15 +4,15 @@ import { defineQuery, defineSignal } from "@temporalio/workflow";
 // XState Events
 export type CloseEvent = { type: "close" };
 export type EscalateEvent = { type: "escalate"; context?: string };
+type CaseMachineEvent = CloseEvent | EscalateEvent;
 
 // Other XState types
-type CaseMachineEvent = CloseEvent | EscalateEvent;
+export type ClosedSource = "USER" | "STAFF" | "TIMEOUT";
 export type CaseMachineContext = {
   closedBy?: ClosedSource;
 };
 export type CaseMachineState = SnapshotFrom<typeof caseMachine>;
 
-export type ClosedSource = "USER" | "STAFF" | "TIMEOUT";
 // Temporal signals
 type FromEvent<T extends { type: string }> = [Omit<T, "type">];
 export const closeSignal = defineSignal<FromEvent<CloseEvent>>("close");

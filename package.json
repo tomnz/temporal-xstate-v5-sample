@@ -2,7 +2,8 @@
   "name": "temporal-xstate-v5",
   "packageManager": "yarn@4.1.1",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "worker": "ts-node src/worker.ts"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

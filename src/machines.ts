@@ -32,7 +32,7 @@ export const caseMachine = setup({
   },
   delays: {
     // Time after which a case is automatically closed due to inactivity.
-    inactiveClose: 1000 * 30, // 1 minute - testing
+    inactiveClose: 1000 * 30, // 30 seconds - testing
   },
 }).createMachine({
   initial: "open",
